@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kỷ Niệm Lớp C8</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .header {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    /* Thanh điều hướng */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #0056b3;
+        color: white;
+        padding: 15px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        padding: 0;
+    }
+
+    .menu-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #004494;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-links.show {
+        transform: translateX(0);
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+        border-bottom: 1px solid #003366;
+    }
+
+    /* Ẩn menu ba gạch trên màn hình lớn */
+    @media (min-width: 768px) {
+        .menu-toggle {
+            display: none;
+        }
+        .nav-links {
+            position: static;
+            flex-direction: row;
+            width: auto;
+            transform: translateX(0);
+            background-color: transparent;
+            margin-left: auto;
+            height: auto;
+        }
+        .nav-links li a {
+            padding: 0 15px;
+            border-bottom: none;
+        }
+    }
+
+    /* Danh sách lớp */
+    .class-list {
+        max-width: 800px;
+        margin: 100px auto 20px auto; /* thêm khoảng cách tránh menu che */
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .class-list h2 {
+        text-align: center;
+        color: #0056b3;
+        margin-bottom: 20px;
+    }
+
+    .class-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .class-list li {
+        padding: 8px 12px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .class-list li:last-child {
+        border-bottom: none;
+    }
+
+    .teacher {
+        font-weight: bold;
+        color: #d9534f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Thanh menu mới -->
+  <nav class="navbar">
+    <button class="menu-toggle" id="menuToggle">
+    <span class="icon">☰</span>
+</button>
+      <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="danhsach.html">Danh Sách Lớp</a></li>
+          <li><a href="l10.html">Kỷ niệm 10C8</a></li>
+          <li><a href="l11.html">Kỷ niệm 11C8</a></li>
+          <li><a href="l12.html">Kỷ niệm 12C8</a></li>
+      </ul>
+  </nav>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Lớp C8</h1>
+    <p>Trung Học Phổ Thông Krông Nô</p>
+  </div>
+
+  <!-- Danh sách lớp -->
+  <section class="class-list" id="lop">
+    <h2>Danh sách lớp</h2>
+    <ul>
+      <li class="teacher">Giáo viên chủ nhiệm: Bùi Như Dung</li>
+<li>1. Trần Ngọc An</li>
+<li>2. Phan Thị Trường An</li>
+<li>3. Nguyễn Y Bảo Anh Knul</li>
+<li>4. Đinh Thái Bảo</li>
+<li>5. Đinh Hồng Tiến</li>
+<li>6. Hoàng Thị Bình Thơ</li>
+<li>7. Hà Nhật Lệ</li>
+<li>8. Hải Yến</li>
+<li>9. Thanh Hằng</li>
+<li>10. Khánh Hoà</li>
+<li>11. Nông Hồng Hà Ly</li>
+<li>12. Lý Thị Hà</li>
+<li>13. Lê Thị Huyền Trang</li>
+<li>14. Mạch Thị Yến Nhi</li>
+<li>15. Y Na Hum Eban</li>
+<li>16. Nguyễn Thị Thảo My</li>
+<li>17. Nguyễn Vũ Lan Anh</li>
+<li>18. Nguyễn Bùi Thảo Vy</li>
+<li>19. Nguyễn Khánh Huyền</li>
+<li>20. Nguyễn Ngọc Diệp</li>
+<li>21. Nguyễn Phương Thảo</li>
+<li>22. Nguyễn Thị Kiều Na</li>
+<li>23. Nguyệt Diệu</li>
+<li>24. Nguyễn Thị Nguyệt Nga</li>
+<li>25. Ngọc Trinh</li>
+<li>26. Nguyễn Văn Ngọc</li>
+<li>27. Nguyễn Thị Huyền Trang</li>
+<li>28. Phương Anh</li>
+<li>29. Phương Giang</li>
+<li>30. Thanh Liêm</li>
+<li>31. Quỳnh Trang</li>
+<li>32. Nguyễn Văn Thiện Nhân</li>
+<li>33. Thu Hương</li>
+<li>34. Thùy Linh</li>
+<li>35. Thu Hương</li>
+<li>36. Thùy Trâm</li>
+<li>37. Thùy Nhung</li>
+<li>38. Trần Thị Kim Ngân</li>
+<li>39. Trần Văn Thành</li>
+<li>40. Đàm Trọng Nghĩa</li>
+<li>41. Văn Nguyên</li>
+<li>42. Mai Việt Hoàng</li>
+<li>43. Đoàn Tuyết Như</li>
+<li>44. Yến Nhi</li>
+<li>45. Đàm Thị Lụa</li>
+<li>46. Lê Hằng</li>
+<li>47. Phạm Trung Nguyên</li>
+
+    </ul>
+  </section>
+
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", function() {
+      document.getElementById("navLinks").classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
